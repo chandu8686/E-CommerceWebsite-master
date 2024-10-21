@@ -115,6 +115,14 @@ function dynamicContentDetails(ob)
     
     productDetailsDiv.appendChild(buttonDiv)
 
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+        'event': 'pdpView', 
+        'productName': ob.name,  
+        'brandName': ob.brand,  
+        'productPrice': ob.price 
+    });
+
 
     return mainContainer
 }
